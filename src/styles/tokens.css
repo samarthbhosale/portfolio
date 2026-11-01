@@ -1,0 +1,57 @@
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+    --background: #F7F8FB;
+    --background-alt: #EEF0F6;
+    --surface: #FFFFFF;
+    --surface-2: #F1F3F9;
+    --border: #D9DEE9;
+    --border-strong: #8A94A8;
+    --foreground: #0F1320;
+    --muted: #4B5568;
+    --accent: #6F5FE8;
+    --accent-hover: #5E4EDB;
+    --accent-active: #4F3FC4;
+    --on-accent: #FFFFFF;
+    --accent-2: #0B6BB8;
+    --success: #0F7B5F;
+}
+
+.dark {
+    --background: #090B11;
+    --surface: #111520;
+    --surface-2: #181D2B;
+    --border: #293142;
+    --border-strong: #5A6680;
+    --foreground: #F5F7FB;
+    --muted: #9CA6B8;
+    --accent: #8B7CF6;
+    --accent-hover: #9D90F8;
+    --accent-active: #7A6AEA;
+    --on-accent: #0B0D14;
+    --accent-2: #57B8FF;
+    --success: #52C7A5;
+}
+
+@theme inline {
+    /* color schemes */
+    --color-background: var(--background);
+    --color-background-alt: var(--background-alt);
+    --color-surface: var(--surface);
+    --color-surface-2: var(--surface-2);
+    --color-border: var(--border);
+    --color-border-strong: var(--border-strong);
+    --color-foreground: var(--foreground);
+    --color-muted: var(--muted);
+    --color-accent: var(--accent);
+    --color-accent-hover: var(--accent-hover);
+    --color-accent-active: var(--accent-active);
+    --color-on-accent: var(--on-accent);
+    --color-accent-2: var(--accent-2);
+    --color-success: var(--success);
+
+    /* fonts */
+    --font-sans: var(--font-inter), system-ui, sans-serif;
+    --font-heading: var(--font-space-grotesk), system-ui, sans-serif;
+    --font-mono: var(--font-jetbrains-mono), ui-monospace, monospace;
+}
