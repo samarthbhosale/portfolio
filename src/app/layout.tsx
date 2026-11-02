@@ -5,6 +5,7 @@ import "@/styles/globals.css";
 import { ThemeProvider } from "@/components/providers/theme-provider";
 import { SiteHeader } from "@/components/layout/site-header";
 import { SkipLink } from "@/components/layout/skip-link";
+import { SiteFooter } from "@/components/layout/site-footer";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -43,19 +44,22 @@ export const viewport: Viewport = {
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
-      lang="en" suppressHydrationWarning
+      lang="en"
+      suppressHydrationWarning
       className={`${inter.variable} ${spaceGrotesk.variable} ${jetbrainsMono.variable}`}
     >
-      <body className="font-sans antialiased">
+      <body className="flex min-h-dvh flex-col font-sans antialiased">
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <SkipLink />
           <SiteHeader />
-          <main id="main">{children}</main>
+          <main id="main" className="flex-1">
+            {children}
+          </main>
+          <SiteFooter />
         </ThemeProvider>
         <Analytics />
       </body>
       <Analytics />
     </html>
-
   );
 }
