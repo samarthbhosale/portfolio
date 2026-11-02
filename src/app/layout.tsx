@@ -3,6 +3,8 @@ import { Analytics } from "@vercel/analytics/next";
 import { Inter, Space_Grotesk, JetBrains_Mono } from "next/font/google";
 import "@/styles/globals.css";
 import { ThemeProvider } from "@/components/providers/theme-provider";
+import { SiteHeader } from "@/components/layout/site-header";
+import { SkipLink } from "@/components/layout/skip-link";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -46,6 +48,8 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     >
       <body className="font-sans antialiased">
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          <SkipLink />
+          <SiteHeader />
           <main id="main">{children}</main>
         </ThemeProvider>
         <Analytics />
