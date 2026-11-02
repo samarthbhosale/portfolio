@@ -40,7 +40,13 @@ const sizes = {
 };
 
 export function Button(props: ButtonProps) {
-  const { variant = "primary", size = "md", fullOnMobile, className, children } = props;
+  const {
+    variant = "primary",
+    size = "md",
+    fullOnMobile,
+    className,
+    children,
+  } = props;
 
   const classes = cn(
     base,
@@ -55,7 +61,12 @@ export function Button(props: ButtonProps) {
 
     if (external) {
       return (
-        <a href={href} target="_blank" rel="noopener noreferrer" className={classes}>
+        <a
+          href={href}
+          target="_blank"
+          rel="noopener noreferrer"
+          className={classes}
+        >
           {children}
         </a>
       );
@@ -74,7 +85,15 @@ export function Button(props: ButtonProps) {
     );
   }
 
-  const { variant: _v, size: _s, fullOnMobile: _f, className: _c, children: _ch, href: _h, ...rest } = props;
+  const {
+    variant: _v,
+    size: _s,
+    fullOnMobile: _f,
+    className: _c,
+    children: _ch,
+    href: _h,
+    ...rest
+  } = props;
   return (
     <button className={classes} {...rest}>
       {children}
