@@ -41,7 +41,7 @@ export default function Home() {
                 </div>
               </div>
               <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-3 text-center md:justify-start md:text-left">
-                <div className="flex items-center justify-center gap-2">
+                <div className="flex w-full items-center justify-center gap-2 md:w-auto">
                   <LocationIcon
                     size={24}
                     className="text-muted pb-2"
@@ -51,24 +51,26 @@ export default function Home() {
                   </span>
                 </div>
                 <span className="hidden text-accent text-sm md:inline">|</span>
-                <div className="flex items-center gap-2">
-                  <GithubIcon
-                    size={64}
-                    className="size-8 transition-transform hover:scale-110 md:size-16"
-                  />
-                  <a href="https://github.com/samarthbhosale" target="_blank" rel="noopener noreferrer" className="flex items-center text-muted text-sm underline hover:text-foreground">
-                    Github
-                  </a>
-                </div>
-                <span className="hidden text-accent text-sm md:inline">|</span>
-                <div className="flex items-center gap-2">
-                  <LinkedinIcon
-                    size={64}
-                    className="size-8 transition-transform hover:scale-110 md:size-16"
-                  />
-                  <a href="https://linkedin.com/in/samarthbhosale" target="_blank" rel="noopener noreferrer" className="flex items-center text-muted text-sm underline hover:text-foreground">
-                    LinkedIn
-                  </a>
+                <div className="flex items-center gap-x-4">
+                  <div className="flex items-center gap-2">
+                    <GithubIcon
+                      size={64}
+                      className="size-8 transition-transform hover:scale-110 md:size-16"
+                    />
+                    <a href="https://github.com/samarthbhosale" target="_blank" rel="noopener noreferrer" className="flex items-center text-muted text-sm underline hover:text-foreground">
+                      Github
+                    </a>
+                  </div>
+                  <span className="hidden text-accent text-sm md:inline">|</span>
+                  <div className="flex items-center gap-2">
+                    <LinkedinIcon
+                      size={64}
+                      className="size-8 transition-transform hover:scale-110 md:size-16"
+                    />
+                    <a href="https://linkedin.com/in/samarthbhosale" target="_blank" rel="noopener noreferrer" className="flex items-center text-muted text-sm underline hover:text-foreground">
+                      LinkedIn
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
