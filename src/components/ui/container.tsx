@@ -14,9 +14,9 @@ export function Container({
   return (
     <div
       className={cn(
-        "mx-auto w-full max-w-[1200px] px-5 lg:px-10",
+        "mx-auto w-full max-w-[1200px]",
         fillViewport &&
-          "flex min-h-[calc(100dvh-60px)] flex-col justify-center py-0 lg:min-h-[calc(100dvh-64px)]",
+          "flex min-h-[calc(100dvh-60px)] flex-col justify-between py-12 lg:min-h-[calc(100dvh-64px)] lg:py-20",
         className,
       )}
     >

@@ -15,13 +15,13 @@ export function SectionHeader({
   title,
   description,
   action,
-  as: Heading = "h2",
+  as: Heading = "h1",
   className,
 }: SectionHeaderProps) {
   return (
     <div
       className={cn(
-        "mb-10 flex flex-col gap-4 lg:mb-12 lg:flex-row lg:items-end lg:justify-between",
+        "flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between",
         className,
       )}
     >
@@ -29,7 +29,7 @@ export function SectionHeader({
         {/* render <Eyebrow> only when eyebrow is provided */}
         {eyebrow && <Eyebrow>{eyebrow}</Eyebrow>}
         {/* render <Heading className="type-h2 mt-3"> with the title */}
-        <Heading className="type-h2 mt-3">{title}</Heading>
+        <Heading className="type-h1 mt-3">{title}</Heading>
         {/* render the description <p className="type-lead text-muted mt-3 max-w-[560px]"> only when provided */}
         {description && (
           <p className="type-lead text-muted mt-3 max-w-[560px]">{description}</p>

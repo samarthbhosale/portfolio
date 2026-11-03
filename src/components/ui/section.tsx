@@ -22,7 +22,7 @@ export function Section({
     <section
       id={id}
       className={cn(
-        "scroll-mt-16 py-16 lg:py-24",
+        "",
         fillViewport && "py-0",
         tone === "alt" && "bg-background-alt",
         bordered && "border-t",
