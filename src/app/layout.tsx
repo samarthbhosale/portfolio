@@ -48,7 +48,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       suppressHydrationWarning
       className={`${inter.variable} ${spaceGrotesk.variable} ${jetbrainsMono.variable}`}
     >
-      <body className="flex min-h-dvh flex-col font-sans antialiased">
+      <body id="top" className="flex min-h-dvh flex-col font-sans antialiased">
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <SkipLink />
           <SiteHeader />

@@ -3,6 +3,7 @@ import { Container } from "@/components/ui/container";
 import { Wordmark } from "@/components/layout/wordmark";
 import { footerLinks } from "@/content/navigation";
 import { siteConfig } from "@/content/site";
+import { BackToTop } from "@/components/layout/back-to-top";
 
 export function SiteFooter() {
   const year = new Date().getFullYear();
@@ -16,15 +17,18 @@ export function SiteFooter() {
             © {year} {siteConfig.name}
           </p>
           <nav aria-label="Footer" className="flex flex-wrap gap-x-6">
-            {/* map over footerLinks and render one Link per item */}
             {footerLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className="inline-flex min-h-11 items-center text-sm text-muted transition-colors hover:text-foreground"
-              >
-                {link.label}
-              </Link>
+              link.href === "/#top" ? (
+                <BackToTop key={link.href} />
+              ) : (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className="inline-flex min-h-11 items-center text-sm text-muted transition-colors hover:text-foreground"
+                >
+                  {link.label}
+                </Link>
+              )
             ))}
           </nav>
         </div>

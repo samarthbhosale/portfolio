@@ -2,6 +2,7 @@
 @import "./tokens.css";
 @import "./typography.css";
 
+/* Base styles */
 @layer base {
   body {
     background-color: var(--color-background);
@@ -13,7 +14,15 @@
   }
 }
 
+/* Focus styles */
 :focus-visible {
   outline: 2px solid var(--color-accent-2);
   outline-offset: 3px;
+}
+
+/* Smooth scrolling for users who prefer it */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
 }
