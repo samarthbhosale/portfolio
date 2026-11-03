@@ -30,6 +30,22 @@
   }
 }
 
+@utility type-h1 {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 1.75rem;
+  line-height: 1.15;
+  letter-spacing: none;
+
+  @media (min-width: 390px) {
+    font-size: 35px;
+  }
+
+  @media (min-width: 1024px) {
+    font-size: 60px;
+  }
+}
+
 @utility type-h2 {
   font-family: var(--font-heading);
   font-weight: 600;
